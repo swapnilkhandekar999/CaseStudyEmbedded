@@ -12,7 +12,7 @@ INC = -I inc
 # Find out the OS and configure the variables accordingly
 ifdef OS	# All configurations for Windwos OS
    # Delete command 
-   RM = del /q
+   RM = rm -r -f
    # Correct the path based on OS
    FixPath = $(subst /,\,$1)
    # Name of the compiler used
@@ -22,7 +22,7 @@ ifdef OS	# All configurations for Windwos OS
 else #All configurations for Linux OS
    ifeq ($(shell uname), Linux)
    	  # Delete command
-      RM = rm -rf				
+      RM = rm -rf			
 	  # Correct the path based on OS
       FixPath = $1				
 	  # Name of the compiler used
@@ -55,4 +55,3 @@ clean:
 	# Remove all the build files and generated document files
 	$(RM) $(call FixPath,$(BUILD_DIR)/*)
 	make -C documentation clean
-	rmdir $(BUILD_DIR)

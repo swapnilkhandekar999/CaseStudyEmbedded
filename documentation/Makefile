@@ -3,4 +3,4 @@ doc:
 	doxygen ./$(DOXY_FILE)
 
 clean:
-	rm -rf html*
+	rm -r -f html
