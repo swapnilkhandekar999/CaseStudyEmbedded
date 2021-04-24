@@ -1,1 +1,1 @@
-@mainpage Blinky Example by Bharath G @subpage project_main.c
+@mainpage Activity1 for Embedded track by Swapnil Khandekar @subpage project_main.c
