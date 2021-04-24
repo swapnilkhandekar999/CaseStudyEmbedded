@@ -1,7 +1,7 @@
 /**
  * @file project_main.c
- * @author Bharath.G ()
- * @brief Project to Blink an LED at 1000ms ON and 500 ms OFF Interval
+ * @author Swapnil Khandekar ()
+ * @brief Project to complete activities as described in Embedded track
  * @version 0.1
  * @date 2021-04-23
  * 
@@ -9,7 +9,6 @@
  * 
  */
 #include "project_config.h"
-
 #include "user_utils.h"
 #include "blinky.h"
 
@@ -20,7 +19,8 @@
 void peripheral_init(void)
 {
 	/* Configure LED Pin */
-	DDRB |= (1 << DDB0);
+	DDRB |= (1<<PB0);//Makes first pin of PORTB as Output
+    DDRD = 0x00; //Makes all pins of PORTD input
 }
 
 void change_led_state(uint8_t state)
@@ -40,14 +40,7 @@ int main(void)
 {
 	/* Initialize Peripherals */
 	peripheral_init();
-
-	for(;;)
-	{
-        change_led_state(LED_ON);
-		delay_ms(LED_ON_TIME);
-		
-        change_led_state(LED_OFF);
-		delay_ms(LED_OFF_TIME);	
-	}
+	/* Activity1 */
+	activity1();
 	return 0;
 }
