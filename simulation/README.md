@@ -1,8 +1,8 @@
-# Blinky Project In Action
+# Activity1 In Action
 
 |ON|OFF|
 |:--:|:--:|
-|![image](https://user-images.githubusercontent.com/42568338/115950301-094fc700-a4f8-11eb-8202-671ef032d3a6.png)|![image](https://user-images.githubusercontent.com/42568338/115950307-0e147b00-a4f8-11eb-8e6f-bc93a721cd29.png)|
+|![image](https://user-images.githubusercontent.com/42568338/116000242-08f52000-a60d-11eb-8771-51928795259e.png)|![image](https://user-images.githubusercontent.com/42568338/116000247-0eeb0100-a60d-11eb-9f9b-8ea4069628c7.png)|
 
 ## Code 
 ```
