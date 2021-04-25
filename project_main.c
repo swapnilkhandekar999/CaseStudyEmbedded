@@ -21,6 +21,8 @@ void peripheral_init(void)
 	/* Configure LED Pin */
 	DDRB |= (1<<PB0);//Makes first pin of PORTB as Output
     DDRD = 0x00; //Makes all pins of PORTD input
+	PORTD |= (1<<PD1);
+	PORTD |= (1<<PD0);
 }
 
 void change_led_state(uint8_t state)
