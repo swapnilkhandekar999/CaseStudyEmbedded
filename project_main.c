@@ -8,28 +8,8 @@
  * @copyright Copyright (c) 2021
  * 
  */
-#include "project_config.h"
-#include "user_utils.h"
-#include "blinky.h"
-
-/**
- * @brief Initialize all the Peripherals and pin configurations
- * 
- */
-void peripheral_init(void)
-{
-	/* Configure LED Pin */
-	DDRB |= (1<<PB0);//Makes first pin of PORTB as Output
-    DDRD = 0x00; //Makes all pins of PORTD input
-	PORTD |= (1<<PD1);
-	PORTD |= (1<<PD0);
-}
-
-void change_led_state(uint8_t state)
-{
-	LED_PORT = (state << LED_PIN);
-}
-
+#include "activity1.h"
+#include "activity2.h"
 
 /**
  * @brief Main function where the code execution starts
@@ -40,9 +20,8 @@ void change_led_state(uint8_t state)
  */
 int main(void)
 {
-	/* Initialize Peripherals */
-	peripheral_init();
-	/* Activity1 */
-	activity1();
+	InitializePeripherals();/* Initialize Peripherals */
+	/* Turns LED ON if and only if both switches ButtonSensor and Heater are closed */
+	StatusOfLedActuator();
 	return 0;
 }

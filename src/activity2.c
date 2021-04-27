@@ -1,7 +1,9 @@
 #include <avr/io.h>
 #include <util/delay.h>
+#include "activity2.h"
 
-void InitADC()
+#define CONVERSION_IS_INCOMPLETE  ADCSRA & (1<<ADSC)
+void InitializeADC()
 {
     // Select Vref=AVcc
     ADMUX |= (1<<REFS0);
@@ -16,7 +18,7 @@ uint16_t ReadADC(uint8_t channel)
     channel &= 0x07;
     ADCSRA |= (1<<ADSC);
     // wait until ADC conversion is complete
-    while( ADCSRA & (1<<ADSC) );
+    while(CONVERSION_IS_INCOMPLETE);
     ADCSRA|=(1<<ADIF);
     return ADC;
 }
