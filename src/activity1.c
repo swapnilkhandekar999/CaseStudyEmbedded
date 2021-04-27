@@ -1,7 +1,7 @@
 #include "activity1.h"
 #include "activity2.h"
 
-void delay_ms(uint32_t delay_time)
+void DelayMilliSecond(uint32_t delay_time)
 {
 	uint32_t units = 0;
 	for (units = 0; units <= delay_time; units++)
@@ -47,7 +47,7 @@ void StatusOfLedActuator(void)
             if(HEATER_SENSOR_ON){
                 ChangeLEDState(LED_ON);
                 Temperature = ReadADC(ADCchannel);
-                _delay_ms(200);
+                DelayMilliSecond(200);
             }
             else ChangeLEDState(LED_OFF);
         }

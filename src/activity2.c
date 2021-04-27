@@ -3,6 +3,8 @@
 #include "activity2.h"
 
 #define CONVERSION_IS_INCOMPLETE  ADCSRA & (1<<ADSC)
+//#define (1<<REFS0)
+
 void InitializeADC()
 {
     // Select Vref=AVcc

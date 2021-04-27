@@ -12,7 +12,6 @@
  * 
  */
 
-//#include "activity1.h"
 
 /**
  * @brief Function to initialize ADC

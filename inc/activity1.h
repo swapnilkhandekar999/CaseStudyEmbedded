@@ -62,7 +62,7 @@ void SetHeaterSensorPin(void);
  * @param[in] delay_time Delay in Micro seconds
  * 
  */
-void delay_ms(uint32_t delay_time);
+void DelayMilliSecond(uint32_t delay_time);
 
 /**
  * @brief Function to change LED status according to the user requirement in activity1
