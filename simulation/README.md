@@ -2,19 +2,21 @@
 
 |ON|OFF|
 |:--:|:--:|
-|![image](https://user-images.githubusercontent.com/42568338/116000242-08f52000-a60d-11eb-8771-51928795259e.png)|![image](https://user-images.githubusercontent.com/42568338/116000247-0eeb0100-a60d-11eb-9f9b-8ea4069628c7.png)|
+|![image](https://user-images.githubusercontent.com/42568338/116281503-6a50f680-a7a7-11eb-8b08-dc74c8f9880d.png)|![image](https://user-images.githubusercontent.com/42568338/116281538-71780480-a7a7-11eb-8201-b2489d5fbe29.png)|
 
 ## Code 
 ```
-	while(1){
-		/*checks whether button sensor is ON or OFF */
-		if((PIND & 1<<PD0)){
-		    /*checks whether heater button is ON or OFF */
-		    if((PIND & 1<<PD1)){
-			change_led_state(LED_ON);
-		    }
-		    else change_led_state(LED_OFF);
-		}
-		else change_led_state(LED_OFF);
-	}
+    while(1){
+        /*checks whether button sensor is ON or OFF */
+        if(BUTTON_SENSOR_ON){
+            /*checks whether heater button is ON or OFF */
+            if(HEATER_SENSOR_ON){
+                ChangeLEDState(LED_ON);
+                Temperature = ReadADC(ADCchannel);
+                DelayMilliSecond(200);
+            }
+            else ChangeLEDState(LED_OFF);
+        }
+        else ChangeLEDState(LED_OFF);
+    }
 ```
