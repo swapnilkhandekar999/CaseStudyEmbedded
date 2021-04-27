@@ -2,7 +2,7 @@
 #define _ACTIVITY2_H_
 
 /**
- * @file activity1.h
+ * @file activity2.h
  * @author Swapnil Khandekar ()
  * @brief Activity2 in the embedded case study
  * @version 0.1

@@ -1,5 +1,6 @@
 #include "activity1.h"
 #include "activity2.h"
+#include "activity3.h"
 
 void DelayMilliSecond(uint32_t delay_time)
 {
@@ -39,6 +40,7 @@ void StatusOfLedActuator(void)
 {   
     uint16_t Temperature=0, ADCchannel=0;
     InitializeADC();
+    InitializePWM();
     ChangeLEDState(LED_OFF);
     while(1){
         /*checks whether button sensor is ON or OFF */
@@ -47,6 +49,7 @@ void StatusOfLedActuator(void)
             if(HEATER_SENSOR_ON){
                 ChangeLEDState(LED_ON);
                 Temperature = ReadADC(ADCchannel);
+                OCR1A = Temperature;
                 DelayMilliSecond(200);
             }
             else ChangeLEDState(LED_OFF);
