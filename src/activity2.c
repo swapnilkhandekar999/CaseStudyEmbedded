@@ -18,6 +18,7 @@ uint16_t ReadADC(uint8_t channel)
     ADMUX &= 0xF8;
     //single conversion mode
     channel &= 0x07;
+    ADMUX &= channel;
     ADCSRA |= (1<<ADSC);
     // wait until ADC conversion is complete
     while(CONVERSION_IS_INCOMPLETE);
