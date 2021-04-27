@@ -1,4 +1,4 @@
-# Activity1 In Action
+# Activity1 and Activity2 In Action
 
 |ON|OFF|
 |:--:|:--:|
