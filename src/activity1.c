@@ -37,6 +37,7 @@ void InitializePeripherals(void)
 uint8_t StatusOfLedActuator(void)
 {   
     uint8_t FLAG=0;
+    InitializePeripherals();/* Initialize Peripherals */
     ChangeLEDState(LED_OFF);
     /*checks whether button sensor is ON or OFF */
     if(BUTTON_SENSOR_ON){

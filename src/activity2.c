@@ -14,6 +14,7 @@ void InitializeADC()
 }
 uint16_t ReadADC(uint8_t channel)
 {
+    InitializeADC();/* Initialize Peripherals for ADC */
     //select ADC channel with safety mask
     ADMUX &= 0xF8;
     //single conversion mode
