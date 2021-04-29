@@ -13,6 +13,7 @@
 /**
  * Include files
  */ 
+#define F_CPU 16000000UL 	/**< Clock Frequency of MCU is 16 MHz */
 #include <avr/io.h>
 #include <util/delay.h>
 
@@ -20,7 +21,7 @@
  * Macro Definitions
  */
 
-//#define F_CPU 16000000UL 	/**< Clock Frequency of MCU is 16 MHz */
+
 #define LED_ON 	(0x01)			/**< LED state HIGH */
 #define LED_OFF	(0x00)			/**< LED state LOW */
 #define LED_PORT (PORTB)    /**< LED Port Number */

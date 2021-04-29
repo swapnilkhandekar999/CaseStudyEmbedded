@@ -1,7 +1,6 @@
 #include "activity1.h"
-#include "activity2.h"
 #include "activity3.h"
-#include <string.h>
+
 #define DUTY_CYCLE(Percent) (1024*Percent/100)
 #define WRITE_PWM OCR1A
 
@@ -14,17 +13,17 @@ void InitializePWM(void){
 
 char GeneratePWM(uint16_t Temperature){
     InitializePWM();/* Initialize Peripherals for PWM */
-    if(Temperature>=0 && Temperature<=200){
+    if(Temperature<=200){
         WRITE_PWM=DUTY_CYCLE(20.0);//PWM of Duty cycle 20%
         DelayMilliSecond(200);
         return 'a';
     }
-    else if(Temperature>=201 && Temperature<=500){
+    else if(Temperature>200 && Temperature<=500){
         WRITE_PWM=DUTY_CYCLE(40.0);//PWM of Duty cycle 40%
         DelayMilliSecond(200);
         return 'b';
     }
-    else if(Temperature>=501 && Temperature<=700){
+    else if(Temperature>500 && Temperature<=700){
         WRITE_PWM=DUTY_CYCLE(70.0);//PWM of Duty cycle 70%
         DelayMilliSecond(200);
         return 'c';

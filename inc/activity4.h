@@ -21,13 +21,13 @@ void USARTInit(void);
  * @brief Function to Read character   
  * 
  */
-char USARTReadChar();
+//char USARTReadChar();
 
 /**
  * @brief Function to write character   
  * @param[in] a single character
  */
-void USARTWriteChar(char);
+//void USARTWriteChar(char);
 
 /**
  * @brief Function to write string  

@@ -1,5 +1,4 @@
-#include <avr/io.h>
-#include <util/delay.h>
+#include "activity1.h"
 #include "activity2.h"
 
 #define CONVERSION_IS_INCOMPLETE  ADCSRA & (1<<ADSC)
