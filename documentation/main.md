@@ -1,1 +1,1 @@
-@mainpage Activity1 for Embedded track by Swapnil Khandekar @subpage project_main.c
+@mainpage CaseStudyEmbedded for Embedded track by Swapnil Khandekar @subpage project_main.c

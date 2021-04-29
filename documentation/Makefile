@@ -1,4 +1,4 @@
-DOXY_FILE = Activity1
+DOXY_FILE = CaseStudyEmbedded
 doc:
 	doxygen ./$(DOXY_FILE)
 
