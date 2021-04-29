@@ -1,12 +1,12 @@
-# Embedded C Programming Activity1 and Activity2 with Continuous Integration and Code Quality
+# Embedded C Programming Activity1, Activity2 and Activity3 with Continuous Integration and Code Quality
 
-# Activity1 and Activity2
+# Activity1, Activity2 and Activity3
 
 ## In Action
 
 |ON|OFF|
 |:--:|:--:|
-|![image](https://user-images.githubusercontent.com/42568338/116281186-13e3b800-a7a7-11eb-93cf-e254f8820467.png)|![image](https://user-images.githubusercontent.com/42568338/116281334-3d9cdf00-a7a7-11eb-9988-a3e8a77634d8.png)|
+|![image](https://user-images.githubusercontent.com/42568338/116395774-2eb73a80-a842-11eb-92b4-84c35cd8924e.png)|![image](https://user-images.githubusercontent.com/42568338/116395704-121b0280-a842-11eb-8551-d43761348797.png)|
 
 #### CI and Code Quality
 
