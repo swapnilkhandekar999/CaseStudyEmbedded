@@ -23,7 +23,8 @@
 int main(void)
 {
 	uint16_t Temperature, ADCchannel=0;
-	char TempType;
+	//char TempType;
+	char* TempType;
 	USARTInit(); /* Initialize Peripherals for UART */
 	while(1){
 		uint8_t Status;

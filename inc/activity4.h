@@ -18,7 +18,7 @@
  */
 #define BAUD 9600 /**< Baud Rate */
 #define BAUDRATE ((F_CPU)/(BAUD*16UL)-1) /**< set baud rate value for UBRR */
-#define DATA_IS_TRANSMITTING !(UCSR0A & (1<<UDRE0)) /**< Data is transmitting */
+#define DATA_IS_TRANSMITTING (!(UCSR0A & (1<<UDRE0))) /**< Data is transmitting */
 #define DATA_IS_RECEIVING !(UCSR0A & (1<<RXC0)) /**< Data is receiving */
 #define DATA UDR0 /**< Data register */
 
@@ -36,15 +36,14 @@ void USARTInit(void);
 
 /**
  * @brief Function to write character   
- * @param[in] character single character
+ * @param[in] letter single character
  */
-//void USARTWriteChar(char character);
+void USARTWriteChar(char letter);
 
 /**
  * @brief Function to write string 
  *  
- * @param[in] letter single character
+ * @param[in] Temp temperature
  */
-void USARTWriteString(char letter);
-
+void USARTWriteString(char* Temp);
 #endif  /* _ACTIVITY4_H_ */

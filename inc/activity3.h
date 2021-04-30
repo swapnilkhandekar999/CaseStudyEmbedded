@@ -33,5 +33,5 @@ void InitializePWM(void);
  * 
  * @return TempToCAN
  */
-char GeneratePWM(uint16_t Temperature);
+char* GeneratePWM(uint16_t Temperature);
 #endif  /* _ACTIVITY3_H_ */

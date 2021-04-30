@@ -17,39 +17,13 @@ char USARTReadChar(){
     }
     return DATA; 
 }
-
+*/
 void USARTWriteChar(char letter){
-    while(DATA_IS_TRANSMITTING) //Wait untill the transmitter is ready 
-    {
-    //Do nothing
-    }
+    //while(DATA_IS_TRANSMITTING) //Wait untill the transmitter is ready 
     DATA = letter; //write the data to USART buffer 
 }
-*/
 
-void USARTWriteString(char letter){
-    if(letter=='a'){
-        while(DATA_IS_TRANSMITTING){};
-            DATA = '2';
-            DATA = '0';
-            DATA = 'C';
-    }
-    if(letter=='b'){
-        while(DATA_IS_TRANSMITTING){};
-            DATA = '2';
-            DATA = '5';
-            DATA = 'C';
-    }
-    if(letter=='c'){
-        while(DATA_IS_TRANSMITTING){};
-            DATA = '2';
-            DATA = '9';
-            DATA = 'C';
-    }
-    if(letter=='d'){
-        while(DATA_IS_TRANSMITTING){};
-            DATA = '3';
-            DATA = '3';
-            DATA = 'C';
-    }
+void USARTWriteString(char* Temp){
+    int i;
+    for(i=0;i<5;i++) USARTWriteChar(*(Temp+i));
 }
