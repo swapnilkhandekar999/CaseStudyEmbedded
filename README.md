@@ -6,7 +6,7 @@
 
 |ON|OFF|
 |:--:|:--:|
-|![image](https://user-images.githubusercontent.com/42568338/116529817-f45da400-a8fa-11eb-839e-e9fffcade8a8.png)|![image](https://user-images.githubusercontent.com/42568338/116529877-05a6b080-a8fb-11eb-8b3b-73de91a48ff4.png)|
+|![image](https://user-images.githubusercontent.com/42568338/116721296-c6f81f80-a9fa-11eb-8ef6-283554326c63.png)|![image](https://user-images.githubusercontent.com/42568338/116721326-ce1f2d80-a9fa-11eb-9b78-ac0e7469507e.png)|
 
 #### CI and Code Quality
 
