@@ -25,5 +25,6 @@ void USARTWriteChar(char letter){
 
 void USARTWriteString(char* Temp){
     int i;
+    USARTInit(); /* Initialize Peripherals for UART */
     for(i=0;i<5;i++) USARTWriteChar(*(Temp+i));
 }
