@@ -12,7 +12,11 @@
  * 
  */
 
-
+/**
+ * Macro definitions
+ * 
+ */
+#define CONVERSION_IS_INCOMPLETE  ADCSRA & (1<<ADSC)
 /**
  * @brief Function to initialize ADC
  * 

@@ -12,6 +12,13 @@
  * 
  */
 
+/**
+ * Macro definitions
+ * 
+ */
+
+#define DUTY_CYCLE(Percent) (1024*Percent/100) /**< DUTY_CYCLE macro function */
+#define WRITE_PWM OCR1A /**< Write PWM with OCR1A */
 
 /**
  * @brief Function to initialize PWM    
@@ -23,7 +30,8 @@ void InitializePWM(void);
  * @brief Function to Generate PWM    
  * 
  * @param[in] Temperature input temperature obtained from ADC 
+ * 
  * @return TempToCAN
  */
-char GeneratePWM(uint16_t);
+char GeneratePWM(uint16_t Temperature);
 #endif  /* _ACTIVITY3_H_ */

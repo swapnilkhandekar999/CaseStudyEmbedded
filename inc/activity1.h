@@ -16,11 +16,11 @@
 #define F_CPU 16000000UL 	/**< Clock Frequency of MCU is 16 MHz */
 #include <avr/io.h>
 #include <util/delay.h>
+#include <avr/interrupt.h> 
 
 /**
  * Macro Definitions
  */
-
 
 #define LED_ON 	(0x01)			/**< LED state HIGH */
 #define LED_OFF	(0x00)			/**< LED state LOW */
@@ -32,9 +32,10 @@
 #define HEATER_SENSOR_PIN  (PORTD1) /**< HEATER_SENSOR Pin number  */
 #define BUTTON_SENSOR_ON 	!(PIND & 1<<PD0)	/**< BUTTON_SENSOR state HIGH */
 #define HEATER_SENSOR_ON	!(PIND & 1<<PD1)	/**< HEATER_SENSOR state HIGH */
-#define SET_PORTB0_AS_OUTPUT  DDRB |= (1<<PORTB0)
-#define SET_PD0_AND_PD1_AS_PULLUP  PORTD |= (1<<PORTD1)|(1<<PORTD0)
-#define SET_PORTD_AS_INPUT  DDRD = 0x00
+#define SET_PORTB0_AS_OUTPUT  DDRB |= (1<<PORTB0) /**< SET_PORTB0_AS_OUTPUT */
+#define SET_PD0_AND_PD1_AS_PULLUP  PORTD |= (1<<PORTD1)|(1<<PORTD0) /**< SET_PD0_AND_PD1_AS_PULLUP */
+#define SET_PORTD_AS_INPUT  DDRD = 0x00  /**< SET_PORTD_AS_INPUT */
+
 /**
  * @brief Function to change status of LED
  * 

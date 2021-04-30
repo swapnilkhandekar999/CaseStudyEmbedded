@@ -1,11 +1,5 @@
-#define BAUD 9600 // define baud 
-#define BAUDRATE ((F_CPU)/(BAUD*16UL)-1) // set baud rate value for UBRR
 #include "activity4.h"
 #include "activity1.h"
-#include <avr/interrupt.h>
-#define DATA_IS_TRANSMITTING !(UCSR0A & (1<<UDRE0))
-#define DATA_IS_RECEIVING !(UCSR0A & (1<<RXC0))
-#define DATA UDR0
 
 void USARTInit(void){
     UBRR0H = (BAUDRATE>>8); //Set Baud rate 

@@ -12,7 +12,7 @@
 #include "activity2.h"
 #include "activity3.h"
 #include "activity4.h"
-#define ON 1
+#define ON 1 /**< ON state */
 /**
  * @brief Main function where the code execution starts
  * 
